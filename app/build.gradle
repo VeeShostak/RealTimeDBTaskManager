@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "io.github.veeshostak.taskmanager"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+
+    compile 'com.android.support:support-v4:25.0.1' // add
+
+
+    // running on an emulator will need to downgrade to version
+    // 9.8.0 or 9.6.1 of the Play Services and Firebase libraries,
+    // depending on the API level being emulated
+    compile 'com.google.android.gms:play-services-places:9.8.0' // googleplay seevices same ver as firebase
+    compile 'com.google.firebase:firebase-core:9.8.0' // analytics
+    compile 'com.google.firebase:firebase-database:9.8.0' // realtime database
+    compile 'com.google.firebase:firebase-auth:9.8.0' // user auth
+    compile 'com.firebaseui:firebase-ui-database:0.6.2'
+
+
+    // CardView
+    compile 'com.android.support:cardview-v7:+'
+
+    // Google Sign In SDK (only required for Google Sign In)
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+// firebase
+apply plugin: 'com.google.gms.google-services'
