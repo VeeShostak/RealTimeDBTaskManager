@@ -43,4 +43,4 @@ will add the task to the “active-tasks” and remove it from “completed-task
 
 ![alt text][database]
 
-[database]: https://github.com/VeeShostak/RealTimeDBTaskManager/raw/master/RealtimeDbStructureA "database stucture"
+[database]: https://github.com/VeeShostak/RealTimeDBTaskManager/blob/master/RealtimeDbStructureA.png "database stucture"
