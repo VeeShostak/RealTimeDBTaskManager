@@ -1,6 +1,6 @@
-#RealTimeDBTaskManager
+# RealTimeDBTaskManager
 
-##Program Description:
+## Program Description:
 
 Android application using cloud based Firebase backend integration. Utilizes real-time data storage
 and synchronization, user authentication, and analytics.
